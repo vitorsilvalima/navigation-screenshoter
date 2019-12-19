@@ -1,14 +1,14 @@
 
-import React from 'react'
-import { Screen } from '../core/screenIterface'
+import React, { ComponentType } from 'react'
+import { NavigationScreen } from '../core/screenIterface'
 import ScreenShootComponent from './screenShootComponent'
 
 class Screnshoot {
-  navigationScreens: Screen[] = []
+  navigationScreens: NavigationScreen[] = []
 
-  public configure = loadNavigation => loadNavigation()
+  public configure = (loadNavigation: () => void): void => loadNavigation()
 
-  public addNavigationScreen = (navigationScreen: Screen) => {
+  public addNavigationScreen = (navigationScreen: NavigationScreen): void => {
     this.navigationScreens.push(navigationScreen)
   }
 
