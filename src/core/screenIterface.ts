@@ -1,15 +1,15 @@
-import { ComponentType } from "react";
+import { ComponentType } from 'react'
 
 export interface ScreenState {
-    name: String,
-    component?: ComponentType,
+    name: string;
+    component?: ComponentType;
 }
 
-export interface Screen {
-    flowName: String
-    screenName: String,
+export interface NavigationScreen {
+    flowName: string;
+    screenName: string;
     actions: {
-        [key: string]: string,
-    },
-    states: ScreenState[],
+        [key: string]: string;
+    };
+    states: ScreenState[];
 }
